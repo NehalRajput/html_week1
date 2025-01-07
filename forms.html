@@ -22,13 +22,24 @@
             <input type="text" placeholder="Last Name" name="" id="lname"><br>
             <input type="reset" value="reset">
             <input type="week" name="" id="">
-            <select name="editors" id="">
-                
+            <select name="editors" id="" multiple>
+
                 <option value="vscode">vscode</option>
                 <option value="subline">subline</option><br>
             </select>
-         
 
+            <input list="editors"name="editor">
+            <datalist id ="editors">
+
+                <option value="vscode">vscode</option>
+                <option value="subline">subline</option><br>
+           
+            </datalist>
+         
+            <input type="hidden" name="">
+
+            <input type="range" id="volume" name="volume" min="0" max="11" />
+            <label for="volume">Volume</label><br>
 
             <button type="submit">pay</button>
           
