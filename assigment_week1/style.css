@@ -1,0 +1,144 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: #333; /* Dark background */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: #fff; 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00bcd4; 
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #fff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h1, section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+
+section p, section ul {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Button Style in Sections */
+button {
+    background-color: #00bcd4; /* Cyan color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0288d1; /* Slightly darker cyan */
+}
+
+/* Footer Social Links */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 40px;
+}
+
+footer .social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #00bcd4; /* Highlight on hover */
+}
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+#home {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.profile-name {
+    color: #333;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile-bio {
+    color: #555;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 10px auto;
+    line-height: 1.8;
+}
