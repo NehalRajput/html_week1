@@ -21,11 +21,14 @@
 <section id="home">
     <div id="profile">
         <img src="nehal.jpeg" alt="Profile Picture" class="profile-pic">
-        <h2 class="profile-name">Nehal Rajput</h2>
-        <p class="profile-bio">
-            A passionate software engineer specializing in Python, Android, JavaScript, and .NET. Dedicated to creating
-            innovative solutions and continuously learning new technologies.
-        </p>
+        <div class="profile-content">
+
+            <h2 class="profile-name">Nehal Rajput</h2>
+            <p class="profile-bio">
+                A passionate software engineer specializing in Python, Android, JavaScript, and .NET. Dedicated to creating
+                innovative solutions and continuously learning new technologies.
+            </p>
+        </div>
     </div>
 
     <h1>Welcome to My Portfolio 🌟</h1>
@@ -75,11 +78,17 @@
 
 <section id="contact">
     <h2>📬 Contact Me</h2>
-    <form action="index1.html" method="GET">
-        <input type="text" name="name" placeholder="Your Name" required><br>
-        <input type="email" name="email" placeholder="Your Email" required><br>
-        <textarea name="message" placeholder="Your Message" required></textarea><br>
-        <button type="submit">✉️ Send</button><br><br>
+    
+    <form action="url" method="GET" >
+        <input type="text" name="username" placeholder="Yourname"  pattern="[A-Za-z\d\.]{6,12}" title="Username must be between 6 and 12 character in length and contain 
+        only letter." required><br>
+        <input type="email" name="email" placeholder="Your Email" maxlength="20"  required><br>
+        <input  type="text" id="phone" name="phone"  placeholder="123-456-7890" required><br>
+        <textarea name="message" placeholder="Your Message" minlength="10" maxlength="200" required></textarea><br>
+        
+
+        <button type="submit" title="Submit your form here.">Submit</button>
+      
     </form>
    
 </section>
@@ -93,11 +102,10 @@
     <p>© 2025 Nehal Rajput. All Rights Reserved.</p>
     <p>Dream big, work hard, and never stop creating. You’ve got this</p>
     <div class="social-links">
-        <a href="#"><i class='bx bxl-instagram'></i> Instagram</a>&nbsp;&nbsp;
-        <a href="#"><i class='bx bxl-whatsapp'></i> WhatsApp</a>&nbsp;&nbsp;
-        <a href="#"><i class='bx bxl-linkedin'></i> LinkedIn</a>&nbsp;&nbsp;
-        <a href="#"><i class='bx bxl-github'></i> GitHub</a>&nbsp;&nbsp;
-        <a href="#"><i class='bx bxl-netlify'></i> Netlify</a>
+        <a href="https://github.com/NehalRa" target="_blank"><i class='bx bxl-github'></i> GitHub</a>&nbsp;&nbsp;
+        <a href="https://app.netlify.com/teams/nehalra/sites" target="_blank"><i class='bx bxl-netlify'></i> Netlify</a>
+        <a href="https://www.linkedin.com/in/nehal-rajput-a0940724b/" target="_blank"><i class='bx bxl-linkedin'></i>linkedin</a>&nbsp;&nbsp;
+        
     </div>
 </footer>
 
