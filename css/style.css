@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: row; /* Items in a row */
+    justify-content: space-around; /* Space around items */
+    align-items: center; /* Center items vertically */
+    height: 200px; /* Container height */
+    border: 2px solid #ccc;
+}
+
+.item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    display: flex;
+   justify-content: end;
+
+}

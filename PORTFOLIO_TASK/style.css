@@ -1,203 +1,247 @@
+
+ h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #fff; 
+}
+
+
 /* General Styles */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Roboto', sans-serif; 
+    background-color: #000;
+    color: #fff; 
     line-height: 1.6;
 }
 
-h1, h2, h3 {
-    font-family: 'Roboto', sans-serif;
-}
-/* About Section */
-#about {
-    background-color: #f0f4c3; 
-    padding: 50px 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-nav{
-
-    background-color: #333;
-    padding: 10px 20px;
+/* Navigation Styles */
+nav {
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-color:  #fd9387;
+    padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
- 
 }
 
 nav a {
+    margin: 0 15px;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-    margin: 0 15px;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #00bcd4;
-    text-shadow: 0 0 5px #00bcd4;
+    color: #171416;
 }
+
+
 
 /* Section Styles */
 section {
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 50px 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    background-color: #fff; 
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ed6454; /* Red background for sections */
 }
 
-/* Home Section */
+/* Home Section  */
 #home {
-    text-align: center;
-    padding: 50px;
-    background: linear-gradient(135deg, #d1c4e9, #90caf9); 
-    color: #fff;
-    margin: 20px auto;
-    max-width: 1200px;
-    border-radius: 8px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Profile Section */
-#profile {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #ffcc80, #ffab91); /* Warm orange to peach gradient */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    background:   #fd9387; 
+    color: #fff; 
+    padding: 50px 20px;
+    font-family: 'Merriweather', serif; 
 }
-.profile-pic {
-    width: 120px; 
-    height: 120px; 
+
+#home h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff; 
+}
+
+#home p {
+    font-size: 1.2rem;
+    color: #fff; 
+    max-width: 700px;
+}
+
+/* Profile Image */
+#profile img {
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    margin-right: 20px;
-    flex-shrink: 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow for the profile image */
+    border: 4px solid #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Image */
+#profile img:hover {
+    box-shadow: 0 15px 25px rgba(196, 82, 82, 0.7); /* Stronger shadow effect when hovering */
+}
+
+
+
+
+/* About Section with Sticker Effect */
+#about {
+    background: #f5e1a4; 
+}
+
+.sticker-effect {
+    background: #fff;
+    border: 3px solid  #fd9387;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.sticker-effect:before {
+    content: "✨";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 30px;
+}
+
+#about p {
+    color: #000; 
 }
 
 /* Skills Section */
 #skills {
-    background-color: #e8f5e9; /* Light green background */
-    padding: 50px 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background:  #fd9387; 
 }
 
 /* Projects Section */
 #projects {
-    background-color: #fff3e0; /* Soft peach background */
-    padding: 50px 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #f5e1a4; 
 }
 
-/* Contact Form Section */
-#contact {
-    background-color: #e3f2fd; /* Light blue background */
-    padding: 50px 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Footer Styles */
-footer {
-    background: linear-gradient(135deg, #2c3e50, #34495e); 
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2); 
-    border-radius: 8px 8px 0 0; 
-}
-
-footer p {
-    margin: 10px 0;
-    font-size: 14px;
-}
-
-footer a {
-    color: #f1c40f; /* Gold color for links */
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #ecf0f1; 
-}
-
-footer .social-links a {
-    margin: 0 5px;
-    color: #f1c40f; 
-    font-size: 18px;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-footer .social-links a:hover {
-    transform: scale(1.2); /* Slight zoom-in effect */
-    color: #ecf0f1; 
-}
-
-
-/* Project Styles */
 .project {
-    background-color: #f9f9f9;
+    background: #fff;
     padding: 20px;
+    border: 1px solid  #fd9387; 
     border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project h3 {
-    margin-bottom: 10px;
-    font-size: 22px;
+    font-size: 1.5rem;
+    color:  #fd9387; 
+}
+
+.project p {
+    font-size: 1rem;
+    color: #333;
 }
 
 .project a {
-    text-decoration: none;
-    color: #00bcd4;
+    color:  #fd9387;
     font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
 .project a:hover {
-    text-decoration: underline;
+    color: #7b0745; 
+}
+
+/* Contact Section */
+#contact {
+    background:  #fd9387; 
 }
 
 /* Resume Section */
 #resume {
-    background-color: #fce4ec;
-    padding: 50px 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    border-radius: 8px;
+    background: #f5e1a4; 
+}
+
+
+
+/* Profile Image */
+#profile img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    border: 4px solid #fff;
+}
+/* Footer Styles */
+footer {
+    background:  #fd9387; /* Red background */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #f4e7ec; 
+    font-weight: bold;
+    text-decoration: none;
+}
+/* Contact Section */
+#contact {
+    background: url('https://www.transparenttextures.com/patterns/black-tie.png'); /* Subtle pattern background */
+    background-color: #fd9387; /* Fallback color if the pattern doesn't load */
+    background-size: cover;
+    padding: 40px 20px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form */
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    
+    border: 1px solid #fd9387;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background-color: #fd9387;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+#contact button:hover {
+    background-color: #e7644a; /* Darker red when hovered */
 }
