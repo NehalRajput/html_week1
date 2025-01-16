@@ -1,16 +1,9 @@
-
- h2, h3 {
-    font-family: 'Roboto', sans-serif;
-    color: #fff; 
-}
-
-
 /* General Styles */
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif; 
-    background-color: #000;
-    color: #fff; 
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff; 
+    color: #000000; 
     line-height: 1.6;
 }
 
@@ -19,17 +12,16 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:  #fd9387;
+    background-color: #b0e0e6; 
     padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
     margin: 0 15px;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
@@ -37,10 +29,8 @@ nav a {
 }
 
 nav a:hover {
-    color: #171416;
+    color: #4fa1e9; 
 }
-
-
 
 /* Section Styles */
 section {
@@ -48,95 +38,88 @@ section {
     margin: 20px auto;
     padding: 50px 20px;
     border-radius: 12px;
+    background-color: #ffffff; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ed6454; /* Red background for sections */
 }
 
-/* Home Section  */
+/* Home Section */
 #home {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background:   #fd9387; 
-    color: #fff; 
+    background: #b0e0e6; 
     padding: 50px 20px;
-    font-family: 'Merriweather', serif; 
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-#home h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #fff; 
+#profile-content h1 {
+    color: #000000; 
 }
 
-#home p {
-    font-size: 1.2rem;
-    color: #fff; 
-    max-width: 700px;
+#profile-content p {
+    color: #000000; 
 }
 
-/* Profile Image */
 #profile img {
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow for the profile image */
-    border: 4px solid #fff;
+    border: 4px solid #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.3s ease;
 }
 
-/* Hover Effect for Image */
 #profile img:hover {
-    box-shadow: 0 15px 25px rgba(196, 82, 82, 0.7); /* Stronger shadow effect when hovering */
+    box-shadow: 0 15px 25px rgba(196, 82, 82, 0.7);
 }
 
-
-
-
-/* About Section with Sticker Effect */
+/* About Section */
 #about {
-    background: #f5e1a4; 
+    background: #ffffff; 
+    color: #000000; 
+}
+
+#about p {
+    color: #333333;
 }
 
 .sticker-effect {
-    background: #fff;
-    border: 3px solid  #fd9387;
+    background: #ffffff;
+    border: 3px solid #b0e0e6; 
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    font-size: 1.1rem;
     position: relative;
     max-width: 800px;
     margin: 20px auto;
 }
 
-.sticker-effect:before {
-    content: "✨";
-    position: absolute;
-    top: -10px;
-    left: 20px;
-    font-size: 30px;
-}
-
-#about p {
-    color: #000; 
-}
-
 /* Skills Section */
 #skills {
-    background:  #fd9387; 
+    background: #b0e0e6; 
+}
+
+ul li {
+    margin: 10px 0;
+    color: #000000;
 }
 
 /* Projects Section */
 #projects {
-    background: #f5e1a4; 
+    background: #ffffff;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .project {
-    background: #fff;
+    background: #ffffff;
     padding: 20px;
-    border: 1px solid  #fd9387; 
+    border: 1px solid #b0e0e6; 
     border-radius: 8px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -148,7 +131,11 @@ section {
 
 .project h3 {
     font-size: 1.5rem;
-    color:  #fd9387; 
+    color: #b0e0e6; 
+}
+
+#projects a {
+    color: #b0e0e6; 
 }
 
 .project p {
@@ -157,91 +144,65 @@ section {
 }
 
 .project a {
-    color:  #fd9387;
+    color: #b0e0e6; 
     font-weight: bold;
     text-decoration: none;
-    font-size: 1rem;
 }
 
 .project a:hover {
-    color: #7b0745; 
+    color: #2996f5; 
 }
 
 /* Contact Section */
 #contact {
-    background:  #fd9387; 
+    background-color: #b0e0e6; 
 }
 
-/* Resume Section */
-#resume {
-    background: #f5e1a4; 
-}
-
-
-
-/* Profile Image */
-#profile img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-    border: 4px solid #fff;
-}
-/* Footer Styles */
-footer {
-    background:  #fd9387; /* Red background */
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-footer a {
-    color: #f4e7ec; 
-    font-weight: bold;
-    text-decoration: none;
-}
-/* Contact Section */
-#contact {
-    background: url('https://www.transparenttextures.com/patterns/black-tie.png'); /* Subtle pattern background */
-    background-color: #fd9387; /* Fallback color if the pattern doesn't load */
-    background-size: cover;
-    padding: 40px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact Form */
 #contact form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#contact input, #contact textarea {
+#contact input,
+#contact textarea {
     width: 100%;
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 15px;
-    
-    border: 1px solid #fd9387;
+    border: 1px solid #b0e0e6; 
     border-radius: 8px;
     font-size: 1rem;
-    background-color: #f9f9f9;
-    color: #333;
+    color: #000000;
 }
 
 #contact button {
     padding: 10px 20px;
-    background-color: #fd9387;
+    background-color: #b0e0e6; 
     border: none;
-    color: white;
     border-radius: 8px;
     cursor: pointer;
     font-size: 1.1rem;
+    color: #ffffff;
 }
 
 #contact button:hover {
-    background-color: #e7644a; /* Darker red when hovered */
+    background-color: #a8d8e1; 
 }
+
+/* Footer Styles */
+footer {
+    background: #b0e0e6; 
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
