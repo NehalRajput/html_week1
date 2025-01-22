@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+    <link rel="stylesheet" href="style.css">
+    <title>Nehal Rajput</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">Nehal Rajput</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="./image/nehal.jpeg" alt="Profile Image">
+        </div>
+        <div class="home-content">
+            <h1>Nehal Rajput</h1>
+            <h3>And I'm a <span class="multiple-text">Software Engineer</span></h3>
+            <p>A passionate software engineer specializing in building scalable and efficient solutions. I love coding, learning new technologies, and creating meaningful projects that make a difference.</p>
+            <div class="social-media">
+                 <a href="https://www.linkedin.com/in/nehal-rajput-a0940724b/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                 <a href="https://github.com/NehalRa" target="_blank"><i class='bx bxl-github'></i></a>
+                 <a href="#"><i class='bx bxl-instagram'></i></a>
+         
+            </div>
+            <a href="nehal_resume.pdf" class="btn">Download CV</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>I'm a <span>Software Engineer</span></h3>
+            <p>I am a software engineer with experience in various technologies, including Java, Android, JavaScript, .NET, and Python. My journey started with a fascination for coding, and over time, I have honed my skills through practical experience and personal projects.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="about-img">
+            <img src="./image/nehal.jpeg" alt="About Image">
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2 class="heading">My <span>Projects</span></h2>
+        <div class="project-grid">
+            <div class="project-box">
+                <h3>🌐 Project 1: <strong>Café Coffee Day Website</strong></h3>
+                <p>Welcome to Café Coffee Day, your go-to destination for delightful coffee and food. Check out our offerings and enjoy a cozy atmosphere!</p>
+                <a href="https://github.com/NehalRa/webapplication" target="_blank" class="btn">🔗 View Project</a>
+            </div>
+            <div class="project-box">
+                <h3>📱 Project 2: <strong>Android Voting App</strong></h3>
+                <p>A mobile app that allows users to register, vote, and view results in real-time. Includes an Election Commission Management (ECM) feature for transparency.</p>
+                <a href="https://github.com/NehalRa/androidPro" target="_blank" class="btn">🔗 View Project</a>
+            </div>
+            <div class="project-box">
+                <h3>🖥️ Project 3: <strong>JavaScript Quiz App</strong></h3>
+                <p>An interactive quiz app that lets users test their knowledge with randomized questions, score tracking, and feedback.</p>
+                <a href="https://github.com/NehalRa/javascript" target="_blank" class="btn">🔗 View Project</a>
+            </div>
+            <div class="project-box">
+                <h3>📊 Project 4: <strong>Portfolio Website</strong></h3>
+                <p>A personal portfolio showcasing my skills, projects, and resume, built with HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/NehalRa/portfolio" target="_blank" class="btn">🔗 View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <ul>
+            <li>🧑‍💻 <strong>Java</strong></li>
+            <li>🌐 <strong>HTML</strong> &amp; <strong>CSS</strong></li>
+            <li>⚡ <strong>JavaScript</strong></li>
+            <li>🐍 <strong>Python</strong></li>
+            <li>📊 <strong>SQL</strong></li>
+            <li>🔢 <strong>Data Structures &amp; Algorithms (DSA)</strong></li>
+            <li>💼 <strong>.NET</strong></li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact <span>Me</span></h2>
+        <form action="url" method="GET">
+            <input type="text" name="username" placeholder="Your Name" pattern="[A-Za-z\d\.]{6,12}" title="Username must be between 6 and 12 characters and contain only letters or digits." required>
+            <input type="email" name="email" placeholder="Your Email" maxlength="20" required>
+            <input type="text" id="phone" name="phone" placeholder="123-456-7890" required>
+            <textarea name="message" placeholder="Your Message" minlength="10" maxlength="200" required></textarea>
+            <button type="submit" title="Submit your form here.">Submit</button>
+        </form>
+    </section>
+    
+       <!-- Footer Section -->
+    <footer class="footer">
+        
+        <p class="copyright">
+            &copy; 2025 Nehal Rajput. All Rights Reserved.
+        </p>
+    </footer>
+</body>
+</html>
