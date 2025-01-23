@@ -18,6 +18,9 @@ body {
     background: #fff; 
     color: #000;
 }
+.skills{
+    min-height: 0vh;
+}
 
 section {
     min-height: 100vh;
