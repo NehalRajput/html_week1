@@ -48,7 +48,7 @@ function sendemail() {
     Email.send({
         Host: "smtp.gmail.com",
         Username: "nehalrajput1710@gmail.com",
-        Password: "Nehal1234@#&", // Use an app password
+        Password: "", // Use an app password
         To: "nehal17.ast@gmail.com",
         From: document.getElementById("email1").value.trim(),
         Subject: "Contact form for enquiry",
