@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
     <title>Nehal Rajput</title>
 </head>
 <body>
@@ -95,15 +99,15 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact <span>Me</span></h2>
-        <form action="url" method="GET">
-            <input type="text" name="username" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" maxlength="20" required>
-            <input type="text" id="phone" name="phone" placeholder="123-456-7890" required>
-            <textarea name="message" placeholder="Your Message" minlength="10" maxlength="200" required></textarea>
+        <form onsubmit="sendemail(); reset(); return false;">
+            <input type="text" name="username" placeholder="Your Name" id="name1">
+            <input type="email" name="email" placeholder="Your Email" id="email1">
+            <input type="text"  name="phone" placeholder="123-456-7890" id="phone1">
+            <textarea name="message" placeholder="Your Message"  id="msg1"></textarea>
             <button type="submit" title="Submit your form here.">Submit</button>
         </form>
     </section>
-
+ 
     <!-- Footer Section -->
     <footer class="footer">
         <p class="copyright">
