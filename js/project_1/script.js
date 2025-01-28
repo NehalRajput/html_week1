@@ -14,7 +14,7 @@ buttons.forEach(function (button)
         {
            body.style.backgroundColor = e.target.id;
         }
-        if(e.target.id=== 'white')
+        if(e.target.id=== 'black')
         {
             body.style.backgroundColor = e.target.id;
         }
