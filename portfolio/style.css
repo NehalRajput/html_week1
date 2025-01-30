@@ -9,6 +9,8 @@
     font-family: -apple-system, sans-serif;
 
 }
+
+
 body::-webkit-scrollbar{
     display: none;
 }

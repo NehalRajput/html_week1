@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment/min/moment.min.js"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="bg-white shadow-md rounded-lg p-6 w-full max-w-4xl">
+        <h1 class="text-2xl font-bold text-center mb-4">To-Do List</h1>
+        <div class="grid grid-cols-2 gap-4 mb-4">
+            <div>
+                <input type="text" id="todoInput" placeholder="Enter a task" class="w-full border border-gray-300 rounded-lg p-2" />
+            </div>
+            <div>
+                <button id="addTaskButton" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Add</button>
+            </div>
+        </div>
+        <div id="taskCounters" class="grid grid-cols-3 gap-4 mb-4 text-center">
+            <p>Total Tasks: <span id="totalTasks">0</span></p>
+            <p>Open Tasks: <span id="openTasks">0</span></p>
+            <p>Completed Tasks: <span id="completedTasks">0</span></p>
+        </div>
+        <ul id="todoList" class="list-none space-y-2"></ul>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.forEach(task => renderTask(task.text, task.completed, task.createdDate));
+            updateCounters();
+
+            $('#addTaskButton').on('click', function() {
+                const taskText = $('#todoInput').val().trim();
+                if (!taskText) return;
+                const createdDate = new Date().toISOString();
+                renderTask(taskText, false, createdDate);
+                saveTask(taskText, false, createdDate);
+                $('#todoInput').val('');
+                updateCounters();
+            });
+
+            function renderTask(text, completed, createdDate) {
+                const li = $('<li></li>').addClass(`flex justify-between items-center border rounded-lg p-2 ${completed ? 'bg-green-100' : 'bg-white'}`);
+                const taskDetails = $('<div></div>').addClass('flex-1');
+                const taskText = $('<span></span>').text(text).addClass(`${completed ? 'line-through text-gray-500' : ''}`);
+                const taskTime = $('<small></small>').text(` (Created: ${moment(createdDate).fromNow()})`).addClass('text-gray-500 block mt-1 task-time');
+                
+                const editButton = $('<button></button>').text('Edit')
+                    .addClass('bg-yellow-500 text-white px-3 py-1 rounded-lg hover:bg-yellow-600 mx-2')
+                    .on('click', function() {
+                        const input = $('<input>').val(taskText.text()).addClass('border p-1 rounded-lg');
+                        const saveButton = $('<button></button>').text('Save').addClass('bg-blue-500 text-white px-3 py-1 rounded-lg hover:bg-blue-600 mx-2')
+                            .on('click', function() {
+                                const newText = input.val().trim();
+                                if (newText) {
+                                    updateTask(text, newText);
+                                    taskText.text(newText);
+                                    input.replaceWith(taskText);
+                                    saveButton.replaceWith(editButton);
+                                }
+                            });
+                        
+                        taskText.replaceWith(input);
+                        $(this).replaceWith(saveButton);
+                    });
+                
+                const completeButton = $('<button></button>').text(completed ? 'Undo' : 'Complete')
+                    .addClass(`bg-green-500 text-white px-3 py-1 rounded-lg hover:bg-green-600 ${completed ? 'bg-yellow-500 hover:bg-yellow-600' : ''}`)
+                    .on('click', function() {
+                        toggleTaskCompletion(text);
+                        li.toggleClass('bg-green-100');
+                        taskText.toggleClass('line-through text-gray-500');
+                        $(this).text($(this).text() === 'Complete' ? 'Undo' : 'Complete');
+                        updateCounters();
+                    });
+                
+                const deleteButton = $('<button></button>').text('Delete')
+                    .addClass('bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600')
+                    .on('click', function() {
+                        li.remove();
+                        removeTask(text);
+                        updateCounters();
+                    });
+                
+                taskDetails.append(taskText, taskTime);
+                li.append(taskDetails, editButton, completeButton, deleteButton);
+                $('#todoList').append(li);
+                
+                setInterval(() => {
+                    taskTime.text(` (Created: ${moment(createdDate).fromNow()})`);
+                }, 60000);
+            }
+
+            function saveTask(text, completed, createdDate) {
+                const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+                tasks.push({ text, completed, createdDate });
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+            }
+
+            function updateTask(oldText, newText) {
+                const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+                const task = tasks.find(t => t.text === oldText);
+                if (task) {
+                    task.text = newText;
+                    localStorage.setItem('tasks', JSON.stringify(tasks));
+                }
+            }
+
+            function toggleTaskCompletion(text) {
+                const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+                const task = tasks.find(t => t.text === text);
+                if (task) {
+                    task.completed = !task.completed;
+                    localStorage.setItem('tasks', JSON.stringify(tasks));
+                }
+            }
+
+            function removeTask(text) {
+                let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+                tasks = tasks.filter(task => task.text !== text);
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+            }
+
+            function updateCounters() {
+                const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+                const total = tasks.length;
+                const completed = tasks.filter(task => task.completed).length;
+                const open = total - completed;
+                $('#totalTasks').text(total);
+                $('#openTasks').text(open);
+                $('#completedTasks').text(completed);
+            }
+        });
+    </script>
+</body>
+</html>
