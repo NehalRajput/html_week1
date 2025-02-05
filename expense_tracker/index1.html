@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto p-4">
+        <!-- Dashboard Section -->
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-xl text-white shadow-lg mb-4">
+            <h2 class="text-3xl font-bold mb-4">Expense Dashboard</h2>
+            <div class="grid grid-cols-3 gap-4 text-black">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-lg">Total Expense This Month</h3>
+                    <p id="totalThisMonth" class="text-2xl font-bold">0</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-lg">Highest Spending This Month</h3>
+                    <p id="highestSpending" class="text-2xl font-bold">0</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-lg">Total Expense (All Time)</h3>
+                    <p id="totalAllTime" class="text-2xl font-bold">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Group Management Section -->
+        <div class="flex justify-between items-center mb-4">
+            <input id="search" type="text" placeholder="Search Group..." class="p-2 border rounded w-1/3">
+            <button id="addGroupBtn" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Add Group</button>
+        </div>
+
+        <div id="groupList"></div>
+
+        <!-- Expense Form Modal -->
+        <div id="expenseModal" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+            <div class="bg-white p-6 rounded-lg shadow-md w-96">
+                <h2 class="text-2xl mb-4">Add Expense</h2>
+                <form id="expenseForm">
+                    <div>
+                        <label for="expenseName" class="block">Expense Name</label>
+                        <input type="text" id="expenseName" class="p-2 w-full border rounded" required>
+                    </div>
+                    <div class="mt-2">
+                        <label for="expenseAmount" class="block">Amount</label>
+                        <input type="number" id="expenseAmount" class="p-2 w-full border rounded" required>
+                    </div>
+                    <div class="mt-2">
+                        <label for="expenseDate" class="block">Date of Expense</label>
+                        <input type="date" id="expenseDate" class="p-2 w-full border rounded" required>
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <button type="submit" id="saveExpenseBtn" class="bg-green-600 text-white p-2 rounded-lg hover:bg-green-700">Save</button>
+                        <button type="button" id="closeModalBtn" class="bg-gray-600 text-white p-2 rounded-lg hover:bg-gray-700">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>

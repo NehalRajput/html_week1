@@ -4,66 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="style.css"> 
-</head>
-<body>
-    <div class="container">
-        <h1>Expense Tracker</h1>
-
-        <!-- Dashboard Section -->
-        <div class="dashboard-section">
-            <h2>Dashboard</h2>
-            <div class="dashboard-cards-container">
-                <!-- Total Expenses -->
-                <div class="dashboard-card">
-                    <h3>Total Expenses</h3>
-                    <p id="total-expenses">0</p>
-                </div>
-
-                <!-- Total Expenses This Month  -->
-                <div class="dashboard-card">
-                    <h3>Total This Month</h3>
-                    <p id="total-expenses-month">0</p>
-                </div>
-                <!-- Highest Spending Group  -->
-                <div class="dashboard-card">
-                    <h3>Highest Spending Group</h3>
-                    <p id="highest-spending">None (0)</p>
-                </div>
-            </div>
-
-            <h3>Groups with Total Expenses</h3>
-            <ul id="group-list" class="group-list"></ul>
-        </div>
-
-        <!-- Group Management Section -->
-        <div class="group-management">
-            <h2>Group Management</h2>
-            <input type="text" id="group-name" placeholder="Enter Group Name" class="input-field">
-            <button id="add-group" class="btn">Add Group</button>
-        </div>
-
-        <!-- Expense Management Section -->
-        <div class="expense-management">
-            <h2>Expense Management</h2>
-            <select id="group-select" class="input-field"></select>
-            <input type="text" id="expense-name" placeholder="Expense Name" class="input-field">
-            <input type="number" id="expense-amount" placeholder="Amount" class="input-field">
-            <input type="date" id="expense-date" class="input-field">
-            <button id="add-expense" class="btn">Add Expense</button>
-        </div>
-
-      <!-- Group Expenses Section -->
-<div class="group-expenses-section">
-    <h2>Group Expenses</h2>
-    <button id="toggle-group-expenses" class="btn">Show Group Expenses</button>
-    <div id="group-expense-details" class="table-container" style="display:none;"></div> <!-- Hidden initially -->
-</div>
-
-    </div>
 
     <script src="script.js"></script>
-</body>
+</head>
+<body class="bg-gray-100 p-6">
+
+    <div class="container mx-auto max-w-3xl bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-center mb-6">Expense Tracker</h1>
+
+        <!-- Dashboard Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+            <div class="bg-blue-500 text-white p-4 rounded-lg text-center">
+                <h3 class="text-lg font-semibold">Total Expenses</h3>
+                <p id="total-expenses" class="text-2xl font-bold">0</p>
+            </div>
+            <div class="bg-green-500 text-white p-4 rounded-lg text-center">
+                <h3 class="text-lg font-semibold">Total This Month</h3>
+                <p id="total-expenses-month" class="text-2xl font-bold">0</p>
+            </div>
+            <div class="bg-red-500 text-white p-4 rounded-lg text-center">
+                <h3 class="text-lg font-semibold">Highest Spending Group</h3>
+                <p id="highest-spending" class="text-2xl font-bold">None (0)</p>
+            </div>
+        </div>
+
+        <!-- Group Management -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold">Group Management</h2>
+            <input type="text" id="group-name" placeholder="Enter Group Name" class="w-full p-2 border rounded mt-2">
+            <button id="add-group" class="mt-2 w-full bg-blue-600 text-white p-2 rounded">Add Group</button>
+            <ul id="group-list" class="mt-4 space-y-2"></ul>
+        </div>
+
+        <!-- Expense Management -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold">Expense Management</h2>
+            <select id="group-select" class="w-full p-2 border rounded mt-2"></select>
+            <input type="text" id="expense-name" placeholder="Expense Name" class="w-full p-2 border rounded mt-2">
+            <input type="number" id="expense-amount" placeholder="Amount" class="w-full p-2 border rounded mt-2">
+            <input type="date" id="expense-date" class="w-full p-2 border rounded mt-2">
+            <button id="add-expense" class="mt-2 w-full bg-green-600 text-white p-2 rounded">Add Expense</button>
+        </div>
+
+        <!-- Group Expenses -->
+        <div class="mb-6">
+            <button id="toggle-group-expenses" class="w-full bg-gray-600 text-white p-2 rounded">Show Group Expenses</button>
+            <div id="group-expense-details" class="mt-4 hidden"></div>
+        </div>
+    </div>
+
+   </body>
 </html>

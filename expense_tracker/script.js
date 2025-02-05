@@ -13,6 +13,7 @@ $(document).ready(function () {
         $('#group-list').empty();
         groups.forEach(group => {
             let groupExpense = 0;
+            //Calculates Each Group's Expense
             expenses.forEach(expense => {
                 if (expense.group === group.name) {
                     let expenseAmount = parseFloat(expense.amount);
@@ -25,6 +26,8 @@ $(document).ready(function () {
                     }
                 }
             });
+            
+            // Highest Spending Group
 
             if (groupExpense > highestSpendingGroup.total) {
                 highestSpendingGroup = { name: group.name, total: groupExpense };
